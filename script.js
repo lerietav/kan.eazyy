@@ -625,6 +625,25 @@ $("board").addEventListener("drop", event => {
   }
 });
 
+/* MODO CLARO / OSCURO: conserva la preferencia localmente */
+const THEME_KEY = "kan-eazyy-theme";
+function applyTheme(theme) {
+  const dark = theme === "dark";
+  document.body.classList.toggle("dark-mode", dark);
+  const button = $("themeToggle");
+  if (button) {
+    button.textContent = dark ? "☀️ Modo claro" : "🌙 Modo oscuro";
+    button.setAttribute("aria-label", dark ? "Activar modo claro" : "Activar modo oscuro");
+    button.setAttribute("aria-pressed", String(dark));
+  }
+}
+applyTheme(localStorage.getItem(THEME_KEY) || "light");
+$("themeToggle")?.addEventListener("click", () => {
+  const nextTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+  localStorage.setItem(THEME_KEY, nextTheme);
+  applyTheme(nextTheme);
+});
+
 /* INICIAR APLICACIÓN */
 
 if (user && user.email) {
