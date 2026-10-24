@@ -812,3 +812,71 @@ dialog form {
     padding: 22px;
   }
 }
+
+/* MODO OSCURO: mejora de usabilidad y personalización */
+body.dark-mode {
+  --canvas: #19151b;
+  --ink: #f4eaf0;
+  --muted: #b9a7b3;
+  --line: #493542;
+  --shadow: 0 9px 28px #00000035;
+  background: var(--canvas);
+  color: var(--ink);
+}
+body.dark-mode .topbar,
+body.dark-mode .stat,
+body.dark-mode .panel,
+body.dark-mode .column,
+body.dark-mode .task,
+body.dark-mode .modal-card,
+body.dark-mode .auth-card {
+  background: #251e27;
+  color: var(--ink);
+  border-color: #493542;
+}
+body.dark-mode .welcome,
+body.dark-mode .toolbar,
+body.dark-mode .filters input,
+body.dark-mode .filters select,
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #211a23;
+  color: var(--ink);
+  border-color: #574052;
+}
+body.dark-mode .column:nth-child(2),
+body.dark-mode .column:nth-child(3),
+body.dark-mode .column:nth-child(4),
+body.dark-mode .column:nth-child(5) {
+  background: #29212b;
+}
+body.dark-mode .task p,
+body.dark-mode .meta,
+body.dark-mode .panel ul,
+body.dark-mode .muted,
+body.dark-mode .workspace {
+  color: #c5b2c0;
+}
+body.dark-mode .meta { border-top-color: #493542; }
+body.dark-mode .mini,
+body.dark-mode .add {
+  background: #3a2937;
+  color: #f1b7d0;
+  border-color: #77506a;
+}
+body.dark-mode .btn-soft {
+  background: #3a2937;
+  color: #f4dce8;
+  border-color: #65465a;
+}
+body.dark-mode .sticker { background: #493044; color: #ffe4f0; }
+body.dark-mode .modal-backdrop { background: #09060bc9; }
+body.dark-mode .task h3,
+body.dark-mode .panel h3,
+body.dark-mode .toolbar h2 { color: #f7eaf1; }
+body.dark-mode .auth-decoration { color: #f0b4ce; }
+body.dark-mode .add:hover,
+body.dark-mode .mini:hover { background: #503348; }
+#themeToggle { white-space: nowrap; }
+@media (max-width: 700px) { #themeToggle { font-size: 11px; padding: 8px; } }
