@@ -880,3 +880,83 @@ body.dark-mode .add:hover,
 body.dark-mode .mini:hover { background: #503348; }
 #themeToggle { white-space: nowrap; }
 @media (max-width: 700px) { #themeToggle { font-size: 11px; padding: 8px; } }
+
+
+/* AJUSTE MODO OSCURO: sobrescribe los fondos claros definidos en los estilos originales */
+html:has(body.dark-mode) { background: #19151b; color-scheme: dark; }
+body.dark-mode,
+body.dark-mode .auth-view {
+  background: #19151b !important;
+  background-image: none !important;
+  color: #f4eaf0 !important;
+}
+body.dark-mode .topbar,
+body.dark-mode .stat,
+body.dark-mode .panel,
+body.dark-mode .column,
+body.dark-mode .task,
+body.dark-mode .modal-card,
+body.dark-mode .auth-card,
+body.dark-mode .filters input,
+body.dark-mode .filters select,
+body.dark-mode .count,
+body.dark-mode .wip,
+body.dark-mode .sticker,
+body.dark-mode .toolbar,
+body.dark-mode .welcome {
+  background: #251e27 !important;
+  color: #f4eaf0 !important;
+  border-color: #493542 !important;
+}
+body.dark-mode .column:nth-child(2),
+body.dark-mode .column:nth-child(3),
+body.dark-mode .column:nth-child(4),
+body.dark-mode .column:nth-child(5),
+body.dark-mode .column.over {
+  background: #29212b !important;
+}
+body.dark-mode .task h3,
+body.dark-mode .panel h3,
+body.dark-mode .toolbar h2,
+body.dark-mode .welcome h1,
+body.dark-mode .col-head,
+body.dark-mode .stat,
+body.dark-mode label,
+body.dark-mode .auth-card h1 {
+  color: #f7eaf1 !important;
+}
+body.dark-mode .task p,
+body.dark-mode .meta,
+body.dark-mode .panel ul,
+body.dark-mode .muted,
+body.dark-mode .workspace,
+body.dark-mode .eyebrow,
+body.dark-mode .small,
+body.dark-mode .count,
+body.dark-mode .wip {
+  color: #c5b2c0 !important;
+}
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea,
+body.dark-mode .filters input,
+body.dark-mode .filters select {
+  background: #211a23 !important;
+  color: #f4eaf0 !important;
+  border-color: #574052 !important;
+}
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder { color: #b9a7b3 !important; }
+body.dark-mode .btn-soft,
+body.dark-mode .mini,
+body.dark-mode .add,
+body.dark-mode .auth-tab {
+  background: #3a2937 !important;
+  color: #f4dce8 !important;
+  border-color: #65465a !important;
+}
+body.dark-mode .auth-tab.active { background: #6b3654 !important; }
+body.dark-mode .brand { color: #fff !important; }
+body.dark-mode .modal-backdrop { background: #09060bd9 !important; }
+body.dark-mode a { color: #f0b4ce; }
+
